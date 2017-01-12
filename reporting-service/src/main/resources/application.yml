@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: reportingservice
+
+server:
+  port: 8081
