@@ -16,6 +16,6 @@ public class SkyClientsConsumer {
     
     @StreamListener(Sink.INPUT)
     public void generateReport(final String report) {
-        LOG.info("{}");
+        LOG.info("{}", report);
     }
 }
