@@ -1,0 +1,10 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: sky-customer-retention-service
+  cloud:
+    stream:
+      bindings:
+        cancellationRequest:
+          destination: RetentionNotification
