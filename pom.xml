@@ -13,6 +13,6 @@
     <modules>
         <module>sky-reporting-service</module>
         <module>sky-membership-service</module>
-        <module></module>
+        <module>sky-customer-retention</module>
     </modules>
 </project>
