@@ -12,7 +12,7 @@
 
     <modules>
         <module>sky-reporting-service</module>
-        <module></module>
+        <module>sky-membership-service</module>
         <module></module>
     </modules>
 </project>
