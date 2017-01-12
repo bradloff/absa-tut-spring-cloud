@@ -17,7 +17,7 @@ public class CustomerRetentionConsumer {
 
     @StreamListener(Channels.CANCELLATION_REQUEST)
     public void cancellation(String message) {
-        System.out.println(">>>"+message);
+        System.out.printf("Flagging this customer's details:\n=======\n%s\n======\n and we will badger him into not cancelling...",message);
     }
 
     interface Channels {
