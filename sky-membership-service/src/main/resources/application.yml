@@ -3,3 +3,18 @@ server:
 spring:
   application:
     name: sky-membership-service
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: RetentionNotification
+        reportRequest:
+          destination: ClientDataRequest
+        reportResponse:
+          destination: ClientDataResponse
+
+
+retention:
+  threshold: 200
+
+
