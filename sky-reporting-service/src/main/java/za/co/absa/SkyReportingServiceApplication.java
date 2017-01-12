@@ -22,7 +22,7 @@ class ReportingServiceProducer {
     @StreamListener(Channels.RETRIEVE_REPORT)
     public void report(String message) {
         System.out.println(">>>"+message);
-        new File("");
+        //new File("");
     }
 
     interface Channels {
