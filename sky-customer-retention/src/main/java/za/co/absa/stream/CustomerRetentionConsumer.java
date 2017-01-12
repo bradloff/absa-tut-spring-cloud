@@ -9,16 +9,16 @@ import org.springframework.messaging.SubscribableChannel;
 @EnableBinding(CustomerRetentionConsumer.Channels.class)
 public class CustomerRetentionConsumer {
 
-   @StreamListener(Channels.CANCELATION_REQUEST)
-    public void cancelation(String message) {
+    @StreamListener(Channels.CANCELLATION_REQUEST)
+    public void cancellation(String message) {
         System.out.println(">>>"+message);
     }
 
     interface Channels {
-        String CANCELATION_REQUEST = "cancelationRequest";
+        String CANCELLATION_REQUEST = "cancellationRequest";
 
-        @Input(CANCELATION_REQUEST)
-        SubscribableChannel retrieveReportChannel();
+        @Input(CANCELLATION_REQUEST)
+        SubscribableChannel cancellationRequestChannel();
     }
 }
 
