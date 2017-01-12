@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SkyReportingServiceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SkyReportingServiceApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SkyReportingServiceApplication.class, args);
+    }
 }
