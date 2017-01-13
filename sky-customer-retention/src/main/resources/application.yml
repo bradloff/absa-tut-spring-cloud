@@ -8,3 +8,4 @@ spring:
       bindings:
         cancellationRequest:
           destination: RetentionNotification
+          content-type: application/json

@@ -45,7 +45,7 @@ public class MembershipService {
         if( threshold.compareTo(customer.getSubscriptionAmount()) == -1) {
             customer.setFlaggedForDeletion(true);
             memberDB.add(customer);
-            GenericMessage<Customer> msg = new GenericMessage(customer.toString());
+            GenericMessage<Customer> msg = new GenericMessage(customer);
             System.out.printf("Yo this guys is spending a lot of money!!! Sending customer data to the retention office [%s]", customer.toString());
 
             output.send(msg);
