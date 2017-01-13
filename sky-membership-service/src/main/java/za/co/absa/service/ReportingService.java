@@ -14,14 +14,14 @@ import java.util.Collection;
 /**
  * Created by barry on 2017/01/12.
  */
-@EnableBinding(ReportingService.Queues.class)
+@EnableBinding(ReportingServiceQueues.class)
 public class ReportingService {
 
 
     @Autowired
     MembershipService memberService;
 
-    @Transformer(inputChannel = Queues.INPUT, outputChannel = Queues.OUTPUT)
+    @Transformer(inputChannel = ReportingServiceQueues.INPUT, outputChannel = ReportingServiceQueues.OUTPUT)
     public String processReportingRequest(String timeData) {
         System.out.println("Reporting, getting all the customers");
         StringBuffer data = new StringBuffer();
@@ -37,16 +37,4 @@ public class ReportingService {
 
 
     }
-
-    interface Queues{
-        String INPUT  = "reportRequest";
-        String OUTPUT = "reportResponse";
-
-        @Input(INPUT)
-        MessageChannel reportRequest();
-
-        @Output(OUTPUT)
-        MessageChannel reportResponse();
-    }
-
 }
