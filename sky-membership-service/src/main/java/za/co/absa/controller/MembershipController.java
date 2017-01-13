@@ -20,7 +20,7 @@ public class MembershipController {
     private MembershipService memServ;
 
     @PostMapping(value = "/enrol")
-    public boolean enrolCustomer(@ModelAttribute Customer customer){
+    public Integer enrolCustomer(@ModelAttribute Customer customer){
         return memServ.enrolCustomer(customer);
     }
 

@@ -32,7 +32,7 @@ public class MembershipService {
     @Autowired
     MembershipDatabase memberDB;
 
-    public boolean enrolCustomer(Customer customer){
+    public Integer enrolCustomer(Customer customer){
         return memberDB.add(customer);
     }
 
