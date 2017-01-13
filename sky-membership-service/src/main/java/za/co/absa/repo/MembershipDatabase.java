@@ -15,11 +15,11 @@ public class MembershipDatabase {
 
     static HashMap<Integer, Customer> db = new HashMap();
 
-    public boolean add(Customer customer){
+    public Integer add(Customer customer){
         System.out.printf("Adding the customer id [%d]\n", customer.getId());
 
         db.put(customer.getId(), customer);
-        return (getById(customer.getId()) != null?true:false);
+        return customer.getId();
     }
 
     public boolean delete(Customer customer){
